@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        transition: all 0.5s;
+      }
+      .option2 {
+        width: 200px;
+        height: 100px;
+        background-color: blue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        transition: all 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="afteroption.html"><div class="option2">Aku Udah Better</div></a>
+    <div class="box" onmouseover="moveToRandomLocation()">Aku Masih Bete!</div>
+
+    <div class="hearts-container">
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      function moveToRandomLocation() {
+        var box = document.querySelector(".box");
+        var viewportWidth = window.innerWidth - box.offsetWidth;
+        var viewportHeight = window.innerHeight - box.offsetHeight;
+
+        var randomX = Math.floor(Math.random() * viewportWidth);
+        var randomY = Math.floor(Math.random() * viewportHeight);
+
+        box.style.left = randomX + "px";
+        box.style.top = randomY + "px";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    #ffc0cb,
+    #ff7f7f
+  ); /* Subtle gradient from pale pink to light red */
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#paragraphs {
+  margin-top: 20px;
+  text-align: center;
+  overflow: hidden;
+  max-height: 400px;
+  transition: max-height 0.5s;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.active {
+  margin-top: 0;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 73%, 18% 100%, 0% 38%);
+  animation: fall-rotate 4s linear infinite; /* Combined fall and rotation animation */
+}
+
+@keyframes fall-rotate {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 1;
+  }
+}

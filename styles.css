@@ -1,0 +1,166 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    #ffc0cb,
+    #ff7f7f
+  ); /* Subtle gradient from pale pink to light red */
+  margin: 0;
+}
+
+/* Existing styles */
+
+/* Existing styles */
+
+.container {
+  text-align: center;
+}
+
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 73%, 18% 100%, 0% 38%);
+  animation: fall-rotate 4s linear infinite; /* Combined fall and rotation animation */
+}
+
+@keyframes fall-rotate {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.image {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.image:hover img {
+  transform: scale(1.1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#modal-image {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* Existing styles */
+
+.image {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.3s;
+}
+
+/* Existing styles */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.image img {
+  max-width: 75%;
+  max-height: 75%;
+  transition: transform 0.3s;
+}
+
+/* Existing styles */
+
+.title-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 36px;
+  color: #4b0025; /* Pink color */
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Existing styles */

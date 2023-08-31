@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    <div class="title-container">
+      <h1 class="title">My Beautiful Princess</h1>
+      <h5 class="title2">
+        You are my beautiful princess, and I'm forever captivated by your grace,
+        kindness, and the love we share.
+      </h5>
+      <a href="word.html"><button>Click Me</button></a>
+    </div>
+    <div class="gallery">
+      <div class="image" onclick="openModal('image1.jpg')">
+        <div class="image-container">
+          <img src="image/1.jpg" alt="Image 1" />
+        </div>
+      </div>
+      <div class="image" onclick="openModal('image2.jpg')">
+        <div class="image-container">
+          <img src="image/2.jpg" alt="Image 2" />
+        </div>
+      </div>
+      <div class="image" onclick="openModal('image3.jpg')">
+        <div class="image-container">
+          <img src="image/7.jpg" alt="Image 3" />
+        </div>
+      </div>
+      <div class="image" onclick="openModal('image1.jpg')">
+        <div class="image-container">
+          <img src="image/8.jpg" alt="Image 1" />
+        </div>
+      </div>
+      <div class="image" onclick="openModal('image1.jpg')">
+        <div class="image-container">
+          <img src="image/9.jpg" alt="Image 1" />
+        </div>
+      </div>
+      <div class="image" onclick="openModal('image1.jpg')">
+        <div class="image-container">
+          <img src="image/10.jpg" alt="Image 1" />
+        </div>
+      </div>
+      <!-- Add more image divs as needed -->
+    </div>
+    <div id="modal" class="modal" onclick="closeModal()">
+      <span class="close-btn">&times;</span>
+      <img id="modal-image" src="" alt="Modal Image" />
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
